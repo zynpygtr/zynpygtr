@@ -1,9 +1,8 @@
 import moduller.oyunlar
 import moduller.hesapmenu
 # import moduller.hesapmenu as hm
-from moduller.hesapmenu import hmmenu
+#from moduller.hesapmenu import hmmenu
 # from moduller.hesapmenu import * # tüm fonksiyonlar.
-import oyunlarklasoru.yilanoyunu
 
 def anamenu():
     print("\033[1;32;40m")
@@ -22,12 +21,12 @@ def anamenu():
     secim = input()
     if secim == "1" : moduller.oyunlar.oyunmenu()
     # if secim == "2" : moduller.hesapmenu.hmmenu() # import moduller.hesammakinesi şeklinde kullanım için idi.
-    # if secim == "2" : moduller.hesapmenu.hmmenu() # import moduller.hesammakinesi şeklinde kullanım için idi.
-    if secim == "2" : hmmenu()
+    if secim == "2" : moduller.hesapmenu.hmmenu() # import moduller.hesammakinesi şeklinde kullanım için idi.
+    #if secim == "2" : hmmenu()
     if secim == "9" : exit()
     else : anamenu()
 
 # print(dir(moduller.oyunlar)) 
-print(dir(moduller.hesapmenu)) # modüllerin içindeki fonksiyonlar.
-help(moduller.hesapmenu.hmmenu)
+#print(dir(moduller.hesapmenu)) # modüllerin içindeki fonksiyonlar.
+#help(moduller.hesapmenu.hmmenu)
 anamenu()
