@@ -56,7 +56,7 @@ class Ogrenci():           # oluşturduğumuz ogrenci sınıfı bir veri tipidir
                             #sınıf adları Pascal case olur, tekil olur.
     ad = "--"
     no = 00
-    def __init__(aa,x="",y=0):     # sınıfın fonksiyonu ile atama işlemi yapma, aa sınıf, x ve y özelliktir (nesne özellikleri oluşturma)
+    def __init__(aa,x="",y=0):     # sınıfın fonksiyonu ile atama işlemi yapma, aa nesne, x ve y özelliktir (nesne özellikleri oluşturma)
         aa.ad = x                   # x="", y=0 yazma sebebimiz eğer bir değer atanmazsa x ve y için, x yani ad yerine boşluk bırakır, y yani no yerine 0 yazar ekrana
         aa.no = y    
         
