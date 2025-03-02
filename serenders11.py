@@ -65,8 +65,36 @@ def ekle():
 
 def oku():
     d = open("rehber.txt","r") #açma modu parametresi olmazsa default olarak r (read) verir
-    d = open("rehber.txt")    #yukarıdaki ile aynı işi yapar. okuma modu
+    d = open("rehber.txt")    #yukarıdaki ile aynı işi yapar. okuma modu parametre yazmazsak r olur
     okunan = d.read()
     print(okunan)
 
 oku()   # ekrana d dosyasına yazdırdığımız metinleri yazar
+
+
+with open('text.txt','a', encoding='utf-8') as xxx :     #kısa yol oluşturduk yani xxx ile dosyamıza işlem yapabiliriz
+     xxx.write('deneme')           #xxx değişken gibi düşünebiliriz yukarıda tanımını yaptık
+
+#f = open("dosya.txt","a")  #vscode için proje klasorüdür
+#f = open("../dosya.txt","a") #vscode için proje klasörünün bir üst klasöründe
+#f = open("deneme/dosya.xxx","a") # varsa deneme isimli klasöre
+#f = open("D:/deneme/dosya.xxx","a") # D sürücüsündeki deneme klasörüne 
+#f = open("dosya.xxx","at") at ile a aynı komuttur 
+#f = open("dosya.xxx","ab")   # ab binary modda çalışır
+f = open("dosya.xxx","a") #vscode için proje klasöründe yani zynpygtr de 
+f.write("Merhaba")
+
+# HATA YAKALAMA. (try - except)
+
+#d = open("rehber4.txt")
+
+try:
+    f = open("rehber10.txt")
+except:                                           # try - except hatayı bulmamızı sağlar mesela rehber 
+    print("Dosta açma işlemi başarısız.")         #rehber10.txt dosyası olmadığı için ekrana bunu yazar
+
+try:
+    print(5/0)                   # hiçbir sayı 0 a bölünemediği için hata verir ve bu hatayı except ile yakalar ekrana yazdırırz
+
+except:
+    print("İşlem hatası")
