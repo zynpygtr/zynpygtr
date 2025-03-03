@@ -11,8 +11,13 @@ aranan = "Çok"
 #aranan= "sıcak$"  #dizinin sonunda yazıyorsa sıcak kelimesini bulur
 print(re.search(aranan,metin4))  #ekrana span=(0,3) yazar yani dizinin ilk 3 indeksinde yazdığını belirtir
 
-d = open("bilgi.txt")
-o = d.read()
-print(o)
+dosya =  open  ("text.txt",encoding="utf8")
+veri = dosya.read()
+print(veri)
+print(re.search("\d{10}", veri))
+print("Bulunan telefon nu:", veri[568:578:])
+
+
+
 
 
